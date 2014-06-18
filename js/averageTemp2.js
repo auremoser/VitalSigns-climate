@@ -8,7 +8,7 @@ var options = {
         text: 'Mean Temperature August 2010'
     },
     chart: {
-        renderTo: 'container',
+        renderTo: 'container2',
         defaultSeriesType: 'line',
     },
     xAxis: {
@@ -20,7 +20,6 @@ var options = {
         }
     },
     tooltip: {
-    	categorySuffix: 'th day',
         valueSuffix: '°C',
     },
     series: []

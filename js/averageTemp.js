@@ -10,6 +10,10 @@ var options = {
         renderTo: 'container',
         defaultSeriesType: 'line',
     },
+    credits: {
+        enabled: false
+    },
+
     xAxis: {
         categories: []
     },
@@ -19,10 +23,8 @@ var options = {
         }
     },
     tooltip: {
-    	categorySuffix: 'th day',
         valueSuffix: '°C',
     },
-    series: []
 };
 
 $.get('data/climate data/CLM-Data_Entry-v3/Data-Table-1.csv', function(data) {
@@ -56,7 +58,8 @@ $.get('data/climate data/CLM-Data_Entry-v3/Data-Table-1.csv', function(data) {
 
 	options.xAxis.categories = datesIncluded;
 	options.series = [{ data: averageTempsArray,
-						name: 'Serial # 5500000016036E41'
+						name: 'Serial # 5500000016036E41',
+                        color: '#238b45'
 					}];
 
     var chart = new Highcharts.Chart(options);
