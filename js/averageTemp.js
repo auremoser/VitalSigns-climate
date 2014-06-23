@@ -3,6 +3,10 @@ var datesIncluded = [];
 var averageTemps = {};
 
 var options = {
+    colors: [
+        // colors taken from the palette on this site: http://vitalsigns.org/
+         '#FFCC33', '#4E733D', '#C04420', '#6E9962', '#9DCBDA', '#FBD8DB', '#fc8d59'
+    ],
 	title: {
         text: 'Mean Temperature August 2010'
     },
@@ -27,7 +31,7 @@ var options = {
     },
 };
 
-$.get('data/climate data/CLM-Data_Entry-v3/Data-Table-1.csv', function(data) {
+$.get('data/climate_data/CLM-Data_Entry-v3/Data-Table-1.csv', function(data) {
 
     var lines = data.split('\n');
     $.each(lines, function(lineNo, line) {
